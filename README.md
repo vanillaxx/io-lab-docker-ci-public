@@ -146,7 +146,6 @@ Removing intermediate container 00e4ac9233fd
  ---> 9947bd763e23
 Successfully built 9947bd763e23
 Successfully tagged groundnuty/io-lab-docker-ci:latest
-docker tag groundnuty/io-lab-docker-ci groundnuty/io-lab-docker-ci:v1.0  # Add the version tag to the latest image
 ```
 
 To validate that image exists see `docker images`. Expected (to the extend) result:
@@ -170,8 +169,6 @@ Expected (to the extend) output of `make push`:
 ...beginning the same as in `docker image` output```
 
 Successfully tagged groundnuty/io-lab-docker-ci:latest
-docker tag groundnuty/io-lab-docker-ci groundnuty/io-lab-docker-ci:ca2de2a # Add the version tag to the latest image
-docker push groundnuty/io-lab-docker-ci:latest # Push image tagged as latest to repository
 The push refers to repository [docker.io/groundnuty/io-lab-docker-ci]
 c53376c17cd0: Pushed 
 0e99ac6c97f1: Pushed 
@@ -184,7 +181,6 @@ deed50ede1d1: Layer already exists
 d87eb7d6daff: Layer already exists 
 beee9f30bc1f: Layer already exists 
 latest: digest: sha256:491183a1ff3b0f8346aa8310400533c385ec45f874900f3541a3a7a1965e92f3 size: 2413
-docker push groundnuty/io-lab-docker-ci:ca2de2a # Push version tagged image to repository (since this image is already pushed it will simply create or update version tag)
 The push refers to repository [docker.io/groundnuty/io-lab-docker-ci]
 c53376c17cd0: Layer already exists 
 0e99ac6c97f1: Layer already exists 
@@ -196,7 +192,7 @@ deed50ede1d1: Layer already exists
 7f4ac501d7a6: Layer already exists 
 d87eb7d6daff: Layer already exists 
 beee9f30bc1f: Layer already exists 
-v1.0: digest: sha256:491183a1ff3b0f8346aa8310400533c385ec45f874900f3541a3a7a1965e92f3 size: 2413
+ca2de2a: digest: sha256:491183a1ff3b0f8346aa8310400533c385ec45f874900f3541a3a7a1965e92f3 size: 2413
 ```
 
 Validate the existence of images on [https://hub.docker.com](https://hub.docker.com). There should be two images present:
