@@ -160,6 +160,7 @@ groundnuty/io-lab-docker-ci          ca2de2a                                    
 ### 3. Push the image to docker hub
 
 > (a student is granted 0.25 point for a success)
+> Remember to use `docker login` to authorize with image repository first!
 
 Fill the missing `TODO-s` in the Makefile so that 'make push' worked.
 
