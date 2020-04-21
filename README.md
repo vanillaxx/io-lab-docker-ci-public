@@ -210,10 +210,11 @@ Validate the existence of images on [https://hub.docker.com](https://hub.docker.
 
 > (a student is granted 0.25 point for a success).
 
-- a) register your repository with [https://travis-ci.org/](https://travis-ci.org/) and configure the environmental variables needed for travis to push:
+- a) on [https://travis-ci.org/account/repositories][(https://travis-ci.org/](https://travis-ci.org/account/repositories)) select your repository so that travis is able to build it
+- b) on the settings page of your travis build configure the environmental variables needed for travis to push:
 ![example 2 travis envs to push to docker hub](.readme-images/travis.png)code 
-- b) make a commit to trigger travis build - the build should be successful
-- c) after committing everything and achieving successful travis build, create a github [release](https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository) (or just create an annotated git tag and push it to the remote). Travis should be triggered and deployment of a properly tagged release should land on [https://hub.docker.com](https://hub.docker.com):
+- c) make a commit to trigger travis build - the build should be successful
+- d) after committing everything and achieving successful travis build, create a github [release](https://help.github.com/en/github/administering-a-repository/managing-releases-in-a-repository) (or just create an annotated git tag and push it to the remote). Travis should be triggered and deployment of a properly tagged release should land on [https://hub.docker.com](https://hub.docker.com):
 ![example 2 images on docker hub](.readme-images/docker-hub-final.png)
 
 ### 6. Fill the missing `TODO-s` in docker-compose-prod.yml so that you can run the newly released image in a production mode.
