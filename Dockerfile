@@ -27,8 +27,6 @@ LABEL org.label-schema.docker.cmd=$SCHEMA_CMD
 
 WORKDIR /code
 
-RUN apk add --no-cache gcc musl-dev linux-headers
-
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 
