@@ -39,12 +39,14 @@ image:
 		--build-arg SCHEMA_BUILD_DATE="$(SCHEMA_BUILD_DATE)" \
 		--build-arg SCHEMA_BUILD_VERSION="$(SCHEMA_BUILD_VERSION)" \
 		--build-arg SCHEMA_CMD="$(SCHEMA_CMD)" \
+		-t $(SCHEMA_NAME):latest .
 	
   # TODO: last part of this command that tags just built image with a specyfic tag
-	
+	docker tag $(SCHEMA_NAME) $(SCHEMA_NAME):$(TAG)
 push: image
 	# TODO: two commands, first pushes the latest image, second pushes the image tagged with specyfic tag
-	
+	docker push $(SCHEMA_NAME):latest
+	docker push $(SCHEMA_NAME):$(TAG)
 clean:
 
 .PHONY: clean image push all
