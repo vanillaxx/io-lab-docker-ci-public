@@ -3,9 +3,16 @@ version: '3.0'
 services:
   web:
     # TODO: image, ports and redis dependency
+    image: vanillaxx/io-lab-docker-ci-public
+    ports:
+      - 5000:5000
+    depends_on: 
+      - redis
     environment:
       REDIS_HOST: redis
       REDIS_PORT: 6379
   redis:
     image: redis:6.0-rc3
     # TODO: persistence for redis. You need to persist /data directory.
+    volumes: 
+      - ./data:/data:z
