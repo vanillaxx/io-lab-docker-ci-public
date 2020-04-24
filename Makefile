@@ -1,4 +1,5 @@
 # Git repo metadata
+#added just to force changes for travis
 TAG = $(shell git describe --tags --always)
 # TODO: if your docher hub account name is different then this on github ovrwrite this this variable with docer hub accout name
 PREFIX = $(shell git config --get remote.origin.url | tr ':.' '/'  | rev | cut -d '/' -f 3 | rev)
